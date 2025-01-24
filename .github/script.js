@@ -22,12 +22,26 @@ function afficherRectangle(hauteur, largeur) {
     lignEtoile = "";
     afficherEtoiles(largeur);
   }
-  console.log(lignEtoile);
 }
 
 afficherRectangle(5, 5);
 
-/* //fonction afficherPointeSapin() qui prendra en paramètre la hauteur de ce triangle
-function afficherPointeSapin(hauteur) {}
-afficherPointeSapin(4);
- */
+//1.3 Triangle d'étoiles
+
+//fonction pour afficher la partie droite du sapin
+function afficherTriangleDroite(n) {
+  //boucle pour vider chaque ligne avant incrementation d'une etoile et rajouter un back slash en fin de ligne
+  for (let i = 0; i < n; i++) {
+    lignEtoile = "";
+    for (let etoile = 0; etoile < i; etoile++) {
+      //boucle imbriquée pour incrementer une etoile de plus a chaque iteration
+      lignEtoile += "*";
+      // lignEtoile += "\\"
+      // console.log(lignEtoile);
+    }
+    lignEtoile += "\\"; //1ere ligne car ne rentre pas dans la boucle imbriquée
+    console.log(lignEtoile);
+  }
+}
+
+afficherTriangleDroite(5);
